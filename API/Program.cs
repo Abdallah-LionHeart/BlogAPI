@@ -37,15 +37,19 @@ app.UseCors(builder =>
     builder
         .AllowAnyHeader()
         .AllowAnyMethod()
-        .AllowCredentials()
-        .WithOrigins("http://localhost:4200", "https://localhost:4200")
+        .AllowAnyOrigin()
 );
 
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+    c.RoutePrefix = string.Empty; // Set Swagger UI to be accessed at the root
+});
 app.MapControllers();
 
 app.MapFallbackToController("Index", "Fallback");
