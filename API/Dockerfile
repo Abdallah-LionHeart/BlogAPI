@@ -2,13 +2,12 @@
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
 
 # Use the official ASP.NET Core SDK image for building the application
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["API.csproj", "./"]
-RUN dotnet restore "API.csproj"
+COPY ["API/API.csproj", "API/"]
+RUN dotnet restore "API/API.csproj"
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "API.csproj" -c Release -o /app/build
