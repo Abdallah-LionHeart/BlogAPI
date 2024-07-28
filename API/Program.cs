@@ -25,6 +25,7 @@ builder.Services.AddCors();
 
 
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
@@ -45,10 +46,11 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseSwagger();
+
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-    c.RoutePrefix = string.Empty; // Set Swagger UI to be accessed at the root
+    c.RoutePrefix = string.Empty;
 });
 app.MapControllers();
 

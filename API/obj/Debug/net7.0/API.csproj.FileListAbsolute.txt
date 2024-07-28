@@ -180,3 +180,4 @@ D:\ProjectFiles\Dockrized Blog API\API\obj\Debug\net7.0\API.genruntimeconfig.cac
 D:\ProjectFiles\Dockrized Blog API\API\obj\Debug\net7.0\ref\API.dll
 D:\ProjectFiles\Dockrized Blog API\API\bin\Debug\net7.0\Npgsql.dll
 D:\ProjectFiles\Dockrized Blog API\API\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\ProjectFiles\Dockrized Blog API\API\bin\Debug\net7.0\railway.json
