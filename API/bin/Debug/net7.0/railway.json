@@ -1,0 +1,11 @@
+{
+ "builds": [
+  {
+   "src": ".",
+   "use": "docker"
+  }
+ ],
+ "deploy": {
+  "start": "dotnet YourProject.dll"
+ }
+}
