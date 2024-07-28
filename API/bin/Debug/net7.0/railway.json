@@ -6,6 +6,6 @@
   }
  ],
  "deploy": {
-  "start": "dotnet YourProject.dll"
+  "start": "dotnet API.dll"
  }
 }
